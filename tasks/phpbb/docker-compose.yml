@@ -8,7 +8,7 @@ services:
     volumes:
       - 'mariadb_data:/bitnami/mariadb'
   phpbb:
-    build: .
+    image: bitnami/phpbb:3.3.10
     ports:
       - '11002:8080'
     environment:
@@ -20,9 +20,11 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
 
       # edit values here
-      - PHPBB_FORUM_NAME="Speedrun Forum"
-      - PHPBB_FORUM_DESCRIPTION="This forum is speedrun!"
-      - PHPBB_HOST="<your_ip>/phpbb"
+      - PHPBB_USERNAME=speedrun
+      - PHPBB_PASSWORD=speedrun
+      - PHPBB_FORUM_NAME=Speedrun Forum
+      - PHPBB_FORUM_DESCRIPTION=This forum is speedrun!
+      - PHPBB_HOST=<your_ip>/phpbb
     volumes:
       - 'phpbb_data:/bitnami/phpbb'
     depends_on:
