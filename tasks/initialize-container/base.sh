@@ -3,5 +3,5 @@
 
 sudo apt update
 sudo apt install nginx -y
-sudo snap install zellij nvim --classic -y
+sudo snap install nvim --classic
 sudo apt upgrade -y
