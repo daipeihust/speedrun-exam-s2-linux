@@ -18,6 +18,11 @@ services:
       - PHPBB_DATABASE_NAME=bitnami_phpbb
       # ALLOW_EMPTY_PASSWORD is recommended only for development.
       - ALLOW_EMPTY_PASSWORD=yes
+
+      # edit values here
+      - PHPBB_FORUM_NAME="Speedrun Forum"
+      - PHPBB_FORUM_DESCRIPTION="This forum is speedrun!"
+      - PHPBB_HOST="<your_ip>/phpbb"
     volumes:
       - 'phpbb_data:/bitnami/phpbb'
     depends_on:
