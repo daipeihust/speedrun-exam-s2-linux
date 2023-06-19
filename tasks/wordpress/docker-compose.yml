@@ -12,8 +12,8 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_CONFIG_EXTRA: |
-        define( 'WP_HOME', 'https://<your_ip>/wordpress' );
-        define( 'WP_SITEURL', 'https://<your_ip>/wordpress' );
+        define( 'WP_HOME', 'http://<your_ip>/wordpress' );
+        define( 'WP_SITEURL', 'http://<your_ip>/wordpress' );
     volumes:
       - wordpress:/var/www/html
 
