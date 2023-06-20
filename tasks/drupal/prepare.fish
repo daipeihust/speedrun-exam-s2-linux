@@ -10,8 +10,10 @@ drush site:install standard --db-url='mysql://drupal:drupal@localhost/drupal' \
     --account-pass="speedrun" --locale="zh-TW"
 
 popd || exit 1
-chmod -R 0777 drupal
-chown -R www-data:www-data drupal
+sudo chmod -R 0777 drupal
+sudo chown -R www-data:www-data drupal
 
 sudo mv drupal/ /var/www/html
 
+sudo a2enmod rewrite
+sudo systemctl restart apache2

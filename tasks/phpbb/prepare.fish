@@ -10,12 +10,12 @@ unzip phpbb.zip
 unzip phpbb.zh-Hant.zip
 
 # Install language pack
-mv mandarin_chinese_traditional_script_3_3_10/* phpBB3
+cp -r mandarin_chinese_traditional_script_3_3_10/* phpBB3
 mv phpBB3 phpbb
 
 cd phpbb || exit 1
-chmod 0666 config.php
-chmod -R 0777 store/ cache/ files/ images/avatars/upload/
-chown -R www-data:www-data /var/www/html/phpbb
+sudo chmod 0666 config.php
+sudo chmod -R 0777 store/ cache/ files/ images/avatars/upload/
+sudo chown -R www-data:www-data .
 
-mv phpbb /var/www/html
+sudo mv ../phpbb /var/www/html

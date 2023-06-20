@@ -1,9 +1,6 @@
 sudo apt install -y php-cli
 
-mkdir /tmp/composer
-cd /tmp/composer || exit 1
-
-curl -sS https://getcomposer.org/installer -o ./composer-setup.php
+curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
 
 # Verification
 set HASH (curl -sS https://composer.github.io/installer.sig)
